@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", init, false);
 
 async function init() {
   const body = document.querySelector("body");
-  const data = { id: localStorage.userIdForDemo };
+  const data = { id: sessionStorage.userIdForDemo };
   const showNewButton = await fetch("/feature-flag/color-change-button", {
     method: "GET",
     headers: data,

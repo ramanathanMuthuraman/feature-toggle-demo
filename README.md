@@ -1,15 +1,19 @@
 # Getting started with feature flags
 
-This is a sample project to introduce how to use feature flags using [Unleash](https://unleash.github.io/) used for the article in LogRocket that can be found [here](--link--pending)
+This is a sample project to introduce how to use feature flags using [Unleash](https://unleash.github.io/) 
+
+## Setting up Unleash
+To set up Unleash, we need three things:
+
+Postgres, which is where Unleash saves the feature flags status
+unleash-server, which provides a UI and endpoint to query for the status of the flags
+unleash-client-node, a library to connect to Unleash server and know the status of the flag
+One way to have Postgres is to execute it with Docker.
 
 ## Make it run
 
 - Clone the repository
+- docker run --name unleash-postgres -e POSTGRES_PASSWORD=pass -d -p 5432:5432 postgres
 - In the terminal install the dependencies with `npm install`
+- Run `npm run unleash-server`
 - Run `npm run server-debug`
-
-## Contributing
-
-This is a reference repository so I will only look into accepting any bug fix or improvement that doesn't vastly change the current content.
-
-On the other hand, you're encouraged to fork and improve it in your own repository, let me know what you come up with ^^.

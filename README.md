@@ -17,3 +17,7 @@ To set up Unleash, we need three things:
 - In the terminal install the dependencies with `npm install`
 - Run `npm run unleash-server`
 - Run `npm run server-debug`
+
+## Reference
+
+https://blog.logrocket.com/using-feature-flags-with-unleash-and-node-js/
